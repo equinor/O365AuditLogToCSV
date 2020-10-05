@@ -40,6 +40,7 @@ namespace AuditLog2CSV.Data {
 
                 using (var writer = new StreamWriter(filename)) {
                     CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture) {
+                        MissingFieldFound = null,
                         Delimiter = SaveDelimiter,
                         SanitizeForInjection = Global.Config.UseCsvSanitizeForInjection
                     };
@@ -81,6 +82,7 @@ namespace AuditLog2CSV.Data {
                 using (var reader = new StreamReader(filename)) {
                     CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture) {
                         Delimiter = ReadDelimiter,
+                        MissingFieldFound = null,
                         BadDataFound = x => { logger.Warn("Bad data found in CSV file {0}: {1}>", filename, x.RawRecord); },
                         IgnoreQuotes = IgnoreQuotesWhileReading
                     };
