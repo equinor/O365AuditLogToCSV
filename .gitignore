@@ -3,3 +3,7 @@
 ################################################################################
 
 /src/AuditLog2CSV/AuditLog2CSV/bin/Debug/netcoreapp3.1
+/src/AuditLog2CSV/AuditLog2CSV/obj/Debug/netcoreapp3.1
+/src/AuditLog2CSV/AuditLog2CSV/obj
+/.vs
+/src/AuditLog2CSV/.vs/AuditLog2CSV/v16
